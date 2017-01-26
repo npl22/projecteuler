@@ -18,7 +18,16 @@ def solution_i(x: int) -> int:
     j += 1
     
   return result
-  
 #Iterates through numbers 1 to x (while last_number < x:)
 #1st conditional statement is used to generate an array for fibonacci numbers
 #2nd conditional statement is used to find the cumulative sum of the even numbers in the sequence
+
+def solution_ii(upper_limit: int) -> int:
+  a,b = 1, 2
+  result = 2
+  while b < upper_limit:
+    a, b = b, a+b
+    if b % 2 == 0:
+      result += b
+      
+  return result
