@@ -26,4 +26,3 @@ def solution_i():
         for i in range(0, len(tri[row])-1):
             tri[row-1][i] += max(tri[row][i], tri[row][i+1])
     return tri[0]
-

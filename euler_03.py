@@ -1,16 +1,19 @@
-# Project Euler 3 Solution
-# What is the largest prime factor of the number 600851475143?
+"""Project Euler 3.
 
-#takes ~38 seconds to solve
-def largest_prime_factor(n: int) -> int:
-  for i in range(2, int(n/2)+1):
-    if n/i == round(n/i) and is_prime(int(n/i)):
-      return int(n/i)
-      
-def is_prime(x: int) -> int:
-  for num in range(2, x):
-    if x % num == 0:
-      return False
-  else:
+What is the largest prime factor of the number 600851475143?
+
+"""
+
+
+def largest_prime_factor(number: int) -> int:
+    """Find the largest prime factor of a number."""
+    for i in range(2, int(number/2)+1):
+        if number/i == round(number/i) and is_prime(int(number/i)):
+            return int(number/i)
+
+def is_prime(number: int) -> int:
+    """Determine if a number is a prime number."""
+    for i in range(2, number):
+        if number % i == 0:
+            return False
     return True
-    
